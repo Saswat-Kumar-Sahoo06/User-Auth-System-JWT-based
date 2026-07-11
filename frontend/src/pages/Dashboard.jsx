@@ -54,14 +54,14 @@ const Dashboard = () => {
               className='h-[80%] min-w-[20%] md:min-h-[90%] md:min-w-[20%] rounded-full pointer-events-none p-1'
             />
             <div className='w-[70%] p-1 text-sm md:text-xl flex flex-col gap-2'>
-              <h1 className='text-md md:text-4xl font-bold'>{userData.userDetails.fullName}</h1>
+              <h1 className='text-md md:text-4xl font-bold'>{userData.userDetails?.fullName}</h1>
               <div className='flex flex-row items-center gap-2 md:gap-4'>
                 <MdOutlineEmail />
-                <p className='text-xs md:text-sm text-gray-400'>{userData.userDetails.email}</p>
+                <p className='text-xs md:text-sm text-gray-400'>{userData.userDetails?.email}</p>
               </div>
               <div className='flex flex-row items-center gap-2 md:gap-4'>
                 <FiPhone />
-                <p className='text-xs md:text-sm text-gray-400'>{userData.userDetails.contactNo}</p>
+                <p className='text-xs md:text-sm text-gray-400'>{userData.userDetails?.contactNo}</p>
               </div>
 
             </div>
@@ -89,28 +89,28 @@ const Dashboard = () => {
                   <FaUser />
                   <p>Full Name</p>
                 </div>
-                <p className='text-xs md:text-xl min-w-[69%] md:min-w-[70%] p-1 md:p-2 rounded-sm overflow-auto bg-gray-200/20 border-gray-200 text-gray-400'>{userData.userDetails.fullName}</p>
+                <p className='text-xs md:text-xl min-w-[69%] md:min-w-[70%] p-1 md:p-2 rounded-sm overflow-auto bg-gray-200/20 border-gray-200 text-gray-400'>{userData.userDetails?.fullName}</p>
               </div>
               <div className='w-full h-[20%] flex flex-row gap-3 justify-between items-center'>
                 <div className='flex flex-row gap-2 items-center text-xs md:text-xl min-w-[30%]'>
                   <MdEmail />
                   <p>Email Address</p>
                 </div>
-                <p className='text-xs md:text-xl min-w-[69%] md:min-w-[70%] p-1 md:p-2 rounded-sm overflow-auto bg-gray-200/20 border-gray-200 text-gray-400'>{userData.userDetails.email}</p>
+                <p className='text-xs md:text-xl min-w-[69%] md:min-w-[70%] p-1 md:p-2 rounded-sm overflow-auto bg-gray-200/20 border-gray-200 text-gray-400'>{userData.userDetails?.email}</p>
               </div>
               <div className='w-full h-[20%] flex flex-row gap-3 justify-between items-center'>
                 <div className='flex flex-row gap-2 items-center text-xs md:text-xl min-w-[30%]'>
                   <FaPhoneAlt />
                   <p>Phone Number</p>
                 </div>
-                <p className='text-xs md:text-xl min-w-[69%] md:min-w-[70%] p-1 md:p-2 rounded-sm bg-gray-200/20 border-gray-200 text-gray-400'>{userData.userDetails.contactNo}</p>
+                <p className='text-xs md:text-xl min-w-[69%] md:min-w-[70%] p-1 md:p-2 rounded-sm bg-gray-200/20 border-gray-200 text-gray-400'>{userData.userDetails?.contactNo}</p>
               </div>
               <div className='w-full h-[20%] flex flex-row gap-3 justify-between items-center'>
                 <div className='flex flex-row gap-2 items-center text-xs md:text-xl min-w-[30%]'>
                   <FaTransgenderAlt />
                   <p>Gender</p>
                 </div>
-                <p className='text-xs md:text-xl min-w-[69%] md:min-w-[70%] p-1 md:p-2 rounded-sm bg-gray-200/20 border-gray-200 text-gray-400'>{userData.userDetails.gender}</p>
+                <p className='text-xs md:text-xl min-w-[69%] md:min-w-[70%] p-1 md:p-2 rounded-sm bg-gray-200/20 border-gray-200 text-gray-400'>{userData.userDetails?.gender}</p>
               </div>
               <div className='w-full h-[20%] flex flex-row gap-3 justify-between items-center'>
                 <div className='flex flex-row gap-2 items-center text-xs md:text-xl min-w-[30%]'>
@@ -118,7 +118,7 @@ const Dashboard = () => {
                   <p>Date Of Birth</p>
                 </div>
                 <div className='text-xs md:text-xl min-w-[69%] md:min-w-[70%] p-1 md:p-2 rounded-sm flex flex-row justify-between bg-gray-200/20 border-gray-200 text-gray-400'>
-                  <p>{userData.userDetails.dateOfBirth.split("T")[0]}</p>
+                  <p>{userData.userDetails?.dateOfBirth?.split("T")[0]}</p>
                   <MdOutlineDateRange />
                 </div>
               </div>
