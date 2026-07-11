@@ -50,7 +50,7 @@ const Dashboard = () => {
 
           <div className='w-[100%] min-h-[30%] flex flex-row justify-around items-center p-1 gap-3 bg-[#5c2cd542] rounded-sm mt-2'>
             <img
-              src={userData.userDetails.photo}
+              src={userData.userDetails?.photo}
               className='h-[80%] min-w-[20%] md:min-h-[90%] md:min-w-[20%] rounded-full pointer-events-none p-1'
             />
             <div className='w-[70%] p-1 text-sm md:text-xl flex flex-col gap-2'>
