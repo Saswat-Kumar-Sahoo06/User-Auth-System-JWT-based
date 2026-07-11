@@ -95,8 +95,8 @@ export const loginUser = async (req, res) => {
     
     const options = {
         httpOnly: true,
-        secure: false,
-        sameSite: "lax",
+        secure: true,
+        sameSite: "none",
     }
 
     return res.status(200)
@@ -131,8 +131,9 @@ export const logoutUser = async (req, res) => {
     }
 
     const options = {
-        httpOnly: true,
-        secure: true
+         httpOnly: true,
+        secure: true,
+        sameSite: "none"
     }
 
     console.log('User loggedOut successfully...');
