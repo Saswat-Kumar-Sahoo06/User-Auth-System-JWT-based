@@ -197,7 +197,14 @@ const Dashboard = () => {
 
                     if (response.data.success) {
                       localStorage.removeItem("userDetails");
-                      userData.setUserDetails(null)
+                      userData.setUserDetails({
+                        fullName: "",
+                        email: "",
+                        gender: "",
+                        contactNo: "",
+                        dateOfBirth: "",
+                        photo: null,
+                      });
                       console.log('User loggedOut successfully...')
                       setTimeout(() => {
                         navigate('/welcome/login')
