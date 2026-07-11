@@ -50,7 +50,7 @@ const UpdateDetails = () => {
             }
             setCheckSubmit(true)
 
-            const response = await axios.patch('http://localhost:8000/api/v1/user/updateDetails', userInfo,
+            const response = await axios.patch('https://user-auth-backend-u9ym.onrender.com/api/v1/user/updateDetails', userInfo,
                 {
                     withCredentials: true,
                 })

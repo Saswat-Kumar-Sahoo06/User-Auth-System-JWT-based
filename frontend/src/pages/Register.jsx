@@ -67,7 +67,7 @@ const Register = () => {
       formData.append("dateOfBirth", userInfo.dateOfBirth)
       formData.append("photo", userInfo.photo)
 
-      const response = await axios.post('http://localhost:8000/api/v1/user/register', formData)
+      const response = await axios.post('https://user-auth-backend-u9ym.onrender.com/api/v1/user/register', formData)
       if (response.data.success === true) {
         setCheckUser(true)
         setTimeout(() => {

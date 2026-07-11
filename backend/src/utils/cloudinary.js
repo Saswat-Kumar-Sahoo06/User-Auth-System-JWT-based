@@ -20,7 +20,7 @@ const uploadOnCloudinary = async (localFilePath) => {
         return response
 
     } catch (error) {
-        console.log(`File upload failed !! ERROR: ${error}`);
+        console.log(error);
         fs.unlinkSync(localFilePath)
         return null
     }
@@ -45,7 +45,7 @@ const deleteFromCloudinary = async (oldPhotoLink) => {
         console.log('Older file deleted successfully from Cloudinary');
         return response
     } catch (error) {
-        console.log(`File deletion failed !! ERROR: ${error}`);
+        console.log(error);
         return null
     }
 }

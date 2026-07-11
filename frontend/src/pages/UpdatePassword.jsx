@@ -43,7 +43,7 @@ const UpdatePassword = () => {
             }
             setCheckSubmit(true)
 
-            const response = await axios.patch('http://localhost:8000/api/v1/user/changePassword', userInfo,
+            const response = await axios.patch('https://user-auth-backend-u9ym.onrender.com/api/v1/user/changePassword', userInfo,
                 {
                     withCredentials: true,
                 })

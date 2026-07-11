@@ -158,7 +158,7 @@ const Dashboard = () => {
                         const formData = new FormData();
                         formData.append("photo", file); // "photo" must match your multer field name
                         try {
-                          const response = await axios.patch('http://localhost:8000/api/v1/user/updatePhoto', formData, { withCredentials: true })
+                          const response = await axios.patch('https://user-auth-backend-u9ym.onrender.com/api/v1/user/updatePhoto', formData, { withCredentials: true })
                           console.log(response.data.message)
                           if (response.data.success) {
                             userData.setUserDetails((prev) => ({
@@ -191,7 +191,7 @@ const Dashboard = () => {
                 className='flex gap-4 text-sm md:text-xl p-3 items-center w-[100%] text-[#ba1c29] border-2 border-[#ba1c29] bg-[#230e10d4] rounded-md '
                 onClick={async () => {
                   try {
-                    const response = await axios.post('http://localhost:8000/api/v1/user/logout', null, {
+                    const response = await axios.post('https://user-auth-backend-u9ym.onrender.com/api/v1/user/logout', null, {
                       withCredentials: true
                     })
 
